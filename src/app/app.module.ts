@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SimpleListComponent } from './components/simple-list/simple-list.component';
+import { SimpleParagraphComponent } from './components/simple-paragraph/simple-paragraph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleListComponent
+    SimpleListComponent,
+    SimpleParagraphComponent
   ],
   imports: [
     BrowserModule
