@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SimpleDataService } from 'src/app/services/simple-data.service';
+import { SimpleDataService } from '../../services/simple-data.service';
 
 @Component({
   selector: 'app-simple-list',

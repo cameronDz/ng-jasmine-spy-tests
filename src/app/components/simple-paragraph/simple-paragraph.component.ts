@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpleDataService } from '../../services/simple-data.service';
 
 @Component({
   selector: 'app-simple-paragraph',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleParagraphComponent implements OnInit {
 
-  constructor() { }
+  public stringPayload: string = '';
+
+  constructor(private simpleDataService: SimpleDataService) {}
 
   ngOnInit() {
+    this.stringPayload = this.simpleDataService.getSmallParagraphPayload();
   }
 
 }

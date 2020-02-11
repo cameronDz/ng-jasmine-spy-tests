@@ -1,13 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { SimpleListComponent } from './components/simple-list/simple-list.component';
+import { SimpleParagraphComponent } from './components/simple-paragraph/simple-paragraph.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        SimpleListComponent
+        SimpleListComponent,
+        SimpleParagraphComponent
       ],
     }).compileComponents();
   }));
