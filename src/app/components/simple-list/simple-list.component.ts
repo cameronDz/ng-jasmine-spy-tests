@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpleDataService } from 'src/app/services/simple-data.service';
 
 @Component({
   selector: 'app-simple-list',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleListComponent implements OnInit {
 
-  constructor() { }
+  public stringPayload: Array<string> = [];
+
+  constructor(private simpleDataService: SimpleDataService) {}
 
   ngOnInit() {
+    this.stringPayload = this.simpleDataService.getSmallDataPayload();
   }
-
 }
