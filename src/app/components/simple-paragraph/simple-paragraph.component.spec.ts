@@ -22,4 +22,11 @@ describe('SimpleParagraphComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should have mocked data', () => {
+  //   const fixture = TestBed.createComponent(SimpleParagraphComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('.paragraph-content').textContent).toContain('mocked data');
+  // });
 });
