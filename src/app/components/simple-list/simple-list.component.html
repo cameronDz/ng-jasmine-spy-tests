@@ -1,4 +1,6 @@
 <p>simple-list works!</p>
-<div *ngFor="let singleString of stringPayload" class="list-wrapper">
-  <div>{{singleString}}</div>
+<div class="list-parent">
+  <div *ngFor="let singleString of stringPayload" class="list-wrapper">
+    <div>{{singleString}}</div>
+  </div>
 </div>

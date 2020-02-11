@@ -29,7 +29,7 @@ describe('SimpleListComponent', () => {
     const fixture = TestBed.createComponent(SimpleListComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.list-wrapper').textContent).toContain('CCC');
+    expect(compiled.querySelector('.list-parent').textContent).toContain('CCC');
   });
 });
 
