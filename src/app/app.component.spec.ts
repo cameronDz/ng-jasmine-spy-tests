@@ -26,6 +26,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ng-jasmine-spy-tests app is running!');
+    expect(compiled.querySelector('.content').textContent).toContain('ng-jasmine-spy-tests');
   });
 });
