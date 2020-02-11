@@ -7,8 +7,6 @@ import { Subscription, BehaviorSubject } from 'rxjs';
 export class SimpleDataService implements OnDestroy, OnInit {
 
   private smallListPayload = ['one', 'TWO', 'three', 'FOUR'];
-  private smallListBehaviourSubject = new BehaviorSubject(this.smallListPayload);
-
   private smallParagraphPayload = 'this is a small paragraph. it is not very long';
   private smallParagraphBehaviourSubject = new BehaviorSubject(this.smallParagraphPayload);
 
@@ -18,21 +16,19 @@ export class SimpleDataService implements OnDestroy, OnInit {
 
   ngOnDestroy(): void {}
 
+  /** get a variable simple */
   public getSmallListPayload(): Array<string> {
     return this.smallListPayload;
   }
 
-  public getSmallParagraphPayload(): string {
-    return this.smallParagraphPayload;
-  }
-
-  public subcribeToSmallListPayload(self: any, successCallback): Subscription
-  {
-    return this.smallListBehaviourSubject.subscribe();
-  }
-
-  public subcribeToSmallParagraphPayload(self: any, successCallback): Subscription
-  {
-    return this.smallParagraphBehaviourSubject.subscribe();
+  /**
+   * get a subscription that returns a variable
+   * @param self component calling
+   * @param successCallback success callback
+   */
+  public subcribeToSmallParagraphPayload(self: any, successCallback): Subscription {
+    return this.smallParagraphBehaviourSubject.asObservable().subscribe(() => {
+      successCallback(self, this.smallParagraphPayload);
+    });
   }
 }

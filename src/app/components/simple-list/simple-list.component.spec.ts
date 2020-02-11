@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SimpleListComponent } from './simple-list.component';
-import { SimpleDataService } from 'src/app/services/simple-data.service';
+import { SimpleDataService } from '../../services/simple-data.service';
 
 describe('SimpleListComponent', () => {
   let component: SimpleListComponent;
@@ -10,7 +9,7 @@ describe('SimpleListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SimpleListComponent ],
-      providers: [ { provide: SimpleDataService, useClass: MockData }]
+      providers: [ { provide: SimpleDataService, useClass: MockDataService }]
     })
     .compileComponents();
   }));
@@ -28,13 +27,14 @@ describe('SimpleListComponent', () => {
   it('should have mocked data ABC and NOT 123', () => {
     const fixture = TestBed.createComponent(SimpleListComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.list-parent').textContent).toContain('CCC');
+    const compiledText = fixture.debugElement.nativeElement.querySelector('.list-parent').textContent;
+    expect(compiledText).toContain('AAAAAa');
+    expect(compiledText).toContain('CCC');
   });
 });
 
-class MockData {
+class MockDataService {
   public getSmallListPayload(): Array<string> {
-    return ['A', 'b', 'CCC'];
+    return ['AAAAAa', 'b', 'CCC'];
   }
 }
