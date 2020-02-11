@@ -1,11 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { SimpleListComponent } from './components/simple-list/simple-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        SimpleListComponent
       ],
     }).compileComponents();
   }));
@@ -26,6 +28,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
+    const text: any =
     expect(compiled.querySelector('.content').textContent).toContain('ng-jasmine-spy-tests');
   });
 });
