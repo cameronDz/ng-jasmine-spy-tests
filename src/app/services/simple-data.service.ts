@@ -1,9 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SimpleDataService {
+export class SimpleDataService implements OnDestroy, OnInit {
 
-  constructor() { }
+  constructor() {}
+
+  ngOnInit(): void {
+    // TODO
+  }
+
+  ngOnDestroy(): void {
+    // TODO
+  }
+
+  public getSmallDataPayload(): Array<string> {
+    return ['one', 'TWO', 'three', 'FOUR'];
+  }
 }
