@@ -13,6 +13,6 @@ export class SimpleListComponent implements OnInit {
   constructor(private simpleDataService: SimpleDataService) {}
 
   ngOnInit() {
-    this.stringPayload = this.simpleDataService.getSmallDataPayload();
+    this.stringPayload = this.simpleDataService.getSmallListPayload();
   }
 }

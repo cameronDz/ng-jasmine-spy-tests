@@ -15,7 +15,11 @@ export class SimpleDataService implements OnDestroy, OnInit {
     // TODO
   }
 
-  public getSmallDataPayload(): Array<string> {
+  public getSmallListPayload(): Array<string> {
     return ['one', 'TWO', 'three', 'FOUR'];
+  }
+
+  public getSmallParagraphPayload(): string {
+    return 'this is a small paragraph. it is not very long';
   }
 }

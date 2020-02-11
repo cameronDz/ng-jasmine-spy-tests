@@ -34,7 +34,7 @@ describe('SimpleListComponent', () => {
 });
 
 class MockData {
-  public getSmallDataPayload(): Array<string> {
+  public getSmallListPayload(): Array<string> {
     return ['A', 'b', 'CCC'];
   }
 }
