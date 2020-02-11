@@ -8,6 +8,7 @@ import { SimpleDataService } from '../../services/simple-data.service';
 })
 export class SimpleParagraphComponent implements OnInit {
 
+  public title = 'paragraph title';
   public stringPayload: string = '';
 
   constructor(private simpleDataService: SimpleDataService) {}
