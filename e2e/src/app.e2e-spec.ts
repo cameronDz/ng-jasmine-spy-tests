@@ -1,6 +1,7 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, By, WebElement } from 'protractor';
 
+const ONE_SECOND: number = 1000;
 describe('workspace-project App', () => {
   let page: AppPage;
 
@@ -10,7 +11,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('ng-jasmine-spy-tests app is running!');
+    expect(page.getTitleText()).toEqual('ng-jasmine-spy-tests');
   });
 
   afterEach(async () => {
@@ -19,5 +20,19 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     } as logging.Entry));
+  });
+});
+
+describe('Google Demo', function() {
+  it('Should Search', function() {
+    browser.driver.get('http://google.com/');
+    browser.driver.findElement(By.name('q')).sendKeys('please work');
+    browser.sleep(ONE_SECOND);
+    browser.driver.findElement(By.className('gNO89b')).click();
+    browser.sleep(ONE_SECOND);
+    browser.driver.findElements(By.className('HF9Klc')).then((elements: Array<WebElement>) => {
+      elements[1].click();
+      browser.sleep(ONE_SECOND);
+    });
   });
 });
