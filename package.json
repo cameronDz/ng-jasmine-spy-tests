@@ -29,6 +29,7 @@
     "acorn": "^7.1.1",
     "codelyzer": "^5.0.0",
     "http-proxy": "^1.18.1",
+    "hosted-git-info": ">=3.0.8",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^5.2.2",
@@ -36,6 +37,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "lodash": ">=4.17.21",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.3",
     "node-forge": "^0.10.0",
@@ -46,7 +48,9 @@
     "tslib": "^1.10.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
+    "url-parse": ">=1.5.0",
     "webpack-subresource-integrity": ">=1.5.1",
+    "xmlhttprequest-ssl": ">=1.6.2",
     "zone.js": "~0.9.1"
   }
 }
